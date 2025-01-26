@@ -2,8 +2,7 @@
     <div class="homepage">
       <!-- Banner -->
       <div class="banner">
-        <h1>Welcome to the Academic Dashboard</h1>
-        <p>Your gateway to essential academic resources</p>
+        <h1>SoM Database</h1>
       </div>
   
       <!-- Dropdown Menu -->
@@ -31,7 +30,7 @@
   
           <!-- Power BI Reports Side by Side -->
           <div class="topics-container">
-            <div class="topic">
+            <div class="topic" @click="viewFullScreen('https://app.powerbi.com/view?r=eyJrIjoiM2JlYmRhNGQtZmY0OC00ZjhmLTk2NjYtZjQyNWI5MDc1NWY1IiwidCI6ImU5NGQ1N2FkLWEwYjctNDRjZi04ODNmLWQ3OTg3YTBiZDI0NCIsImMiOjEwfQ%3D%3D')">
               <h4>Visiting Scholar</h4>
               <iframe
                 src="https://app.powerbi.com/view?r=eyJrIjoiM2JlYmRhNGQtZmY0OC00ZjhmLTk2NjYtZjQyNWI5MDc1NWY1IiwidCI6ImU5NGQ1N2FkLWEwYjctNDRjZi04ODNmLWQ3OTg3YTBiZDI0NCIsImMiOjEwfQ%3D%3D"
@@ -137,7 +136,11 @@
       login() {
         // Redirect to the lecturer page after login
         this.$router.push({ name: "lecturer" });
-      }
+      },
+      viewFullScreen(url) {
+      // Open the Power BI report in full-page view
+      window.open(url, "_blank");
+    },
     },
   };
   </script>
@@ -152,7 +155,7 @@
   }
   
   .banner {
-    background: linear-gradient(to right, #034E69, #034E69);
+    background: linear-gradient(to right, #034E69, #05678A, #08A1C4);
     color: white;
     padding: 40px 20px;
     border-radius: 8px;
