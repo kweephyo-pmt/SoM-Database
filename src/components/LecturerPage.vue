@@ -72,7 +72,7 @@ export default {
 <style scoped>
 /* App Bar */
 .app-bar {
-  background-color:  #034E69;
+  background-color: #034E69 ;
   color: white;
   padding: 10px 20px;
   text-align: center;
